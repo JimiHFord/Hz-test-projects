@@ -62,7 +62,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // this section ties up the web routes
 app.use('/', routes);
 // the name for this style is middleware
-app.use('/users', users);
 // if you haven't guessed it already, the first argument
 // is the route, and the second argument is effectively
 // the "Route-Controller"
