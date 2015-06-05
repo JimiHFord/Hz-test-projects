@@ -10,9 +10,14 @@
 <script src="/socket.io/socket.io.js"></script>
 <script type="text/javascript">
   var socket = io();
+
+  // listen for an event called "magic"
   socket.on('magic', function(data) {
     console.log(data);
     var eventList = $('#eventList');
-    eventList.append('<li>'+data.name+'</li>');
+
+    // take the human readable "name" of the event
+    // and display it in a list item
+    eventList.append('<li>' + data.name + '</li>');
   });
 </script>

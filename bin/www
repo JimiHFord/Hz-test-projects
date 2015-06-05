@@ -1,5 +1,11 @@
 #!/usr/bin/env node
+
+// this is the file that gets executed due to the configuration
+// in ../package.json
+
 var debug = require('debug')('Hz-test-1');
+
+// this is the "...Hz-test-1/app.js" heart of the application file
 var app = require('../app');
 
 app.set('port', process.env.PORT || 3000);
@@ -7,5 +13,13 @@ app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
 });
+
+// this is what connects socket.io to the server already listening on
+// a designated port, which is why we don't have to configure socket.io
+// to listen on a specific port
 var io = require('socket.io')(server);
+// this is the "...Hz-test-1/socket.js" file that contains everything
+// socket related. We inject the socket.io instance that has been configured
+// and connected and is already listening on whatever port our application is
+// listening on into the function returned in the file "socket.js"
 require('../socket')(io);

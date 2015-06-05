@@ -30,7 +30,6 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 // the rest of these are local files all acting like the
 // `C` in MVC
-var users = require('./routes/users');
 var beMagic = require('./routes/be-the-magic');
 var seeMagic = require('./routes/see-the-magic');
 
