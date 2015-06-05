@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+
+
+<h2>Events</h2>
+<ul id="eventList">
+
+</ul>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+  var socket = io();
+  socket.on('magic', function(data) {
+    console.log(data);
+    var eventList = $('#eventList');
+    eventList.append('<li>'+data.name+'</li>');
+  });
+</script>
