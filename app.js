@@ -104,5 +104,9 @@ app.use(function(err, req, res, next) {
     });
 });
 
-
+// now if we wrote
+// var x = require('./app.js');
+// in another file (in the same directory as this one)
+// x would be equal to the app variable since we are
+// setting module.exports equal to the app
 module.exports = app;
