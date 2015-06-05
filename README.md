@@ -19,8 +19,6 @@ If you don't have node.js installed... shame on you. [Get node!](https://nodejs.
 
 ```npm install```
 
-
-
-run ./bin/www
+```DEBUG=Hz-test-1 npm start```
 
 Visit "localhost:3000" in browser. Also open 129.xxx.xxx.xxx:3000 (whoever is hosting the application) on a smartphone or laptop for additional satisfaction. (If you have a firewall running, you have to either open incoming connections on port 3000 or just turn the firewall off.)
