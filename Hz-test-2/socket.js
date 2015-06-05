@@ -15,7 +15,8 @@ module.exports = function(io) {
   io.on('connection', function(socket) {
     console.log('connection established');
     var helper = require('./helper');
-    console.log(helper.guid());
+    socket.guid = helper.guid();
+    console.log(socket.guid);
     // this first "magic" event is triggered by
     // the page called "Be The Magic"
     // the data from the event is passed through the

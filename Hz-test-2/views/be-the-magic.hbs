@@ -1,34 +1,18 @@
-<h1>{{title}}</h1>
 
-<ul>
-  <li>
-    <button id="door">Door</button>
+<ul class="pages">
+  <li class="chat page">
+    <div class="chatArea">
+      <ul class="messages"></ul>
+    </div>
+    <input class="inputMessage" placeholder="Type here..."/>
   </li>
-  <li>
-    <button id="alarm">Alarm</button>
-  </li>
-  <li>
-    <button id="fire">Fire</button>
-  </li>
-  <li>
-    <input id="custom" type="text" placeholder="Custom..."></input>
-    <button id="custom-send">Send</button>
+  <li class="login page">
+    <div class="form">
+      <h3 class="title">Device or room name?</h3>
+      <input class="usernameInput" type="text" maxlength="14" />
+    </div>
   </li>
 </ul>
 
 <script src="/socket.io/socket.io.js"></script>
-<script type="text/javascript">
-  var socket = io();
-  $('#door').click(function(e) {
-    socket.emit('magic', { name: 'Door' });
-  });
-  $('#alarm').click(function(e) {
-    socket.emit('magic', { name: 'Alarm' });
-  });
-  $('#fire').click(function(e) {
-    socket.emit('magic', { name: 'Fire' });
-  });
-  $('#custom-send').click(function(e) {
-    socket.emit('magic', { name: $('#custom').val() });
-  });
-</script>
+<script src="/main.js"></script>
