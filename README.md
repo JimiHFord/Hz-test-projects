@@ -15,9 +15,11 @@ Installation
 
 ```cd Hz-test-1/```
 
+If you don't have node.js installed... shame on you. [get node](https://nodejs.org/) npm stands for node package manager and will automatically be installed with the previously cited link. Until you do that, the following commands will not work.
+
 ```npm install```
 
-(If you don't have node.js installed... shame on you. [get node](https://nodejs.org/))
+
 
 run ./bin/www
 
