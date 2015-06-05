@@ -12,9 +12,9 @@ The other page acts as a device (whether tablet, smartphone, desktop) capable of
 Installation
 ============
 
-```git clone https://github.com/JimiHFord/Hz-test-1.git```
+```git clone https://github.com/JimiHFord/Hz-test-projects.git```
 
-```cd Hz-test-1/```
+```cd Hz-test-projects/Hz-test-1/```
 
 If you don't have node.js installed... shame on you. [Get node!](https://nodejs.org/) npm stands for node package manager and will automatically be installed with the previously cited link. Until you do that, the following commands will not work.
 
