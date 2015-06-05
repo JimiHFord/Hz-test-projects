@@ -33,6 +33,11 @@ module.exports = function(io) {
       /*
         socket.emit('magic', data);
       */
+      // if we were to use the following code, every socket
+      // except for the current socket would get an event back
+      /*
+        socket.broadcast.emit('magic', data);
+      */
 
     });
 
