@@ -41,7 +41,9 @@ var seeMagic = require('./routes/see-the-magic');
 // "dumbed-down" version of our service that is missing
 // many of the core features. I quickly learned that this
 // is not the case. Express is a feature rich framework
-// that is enterprise ready.
+// that is enterprise ready. It does not deal with web
+// sockets so that is what socket.io is for. It serves
+// dynamic web pages and handles API calls.
 var app = express();
 
 
