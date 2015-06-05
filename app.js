@@ -12,13 +12,7 @@ var seeMagic = require('./routes/see-the-magic');
 
 
 var app = express();
-var http = require('http').Server(app);
 
-var io = require('socket.io')(http);
-
-io.on('connection', function(socket) {
-  console.log('connection on app.js');
-});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
